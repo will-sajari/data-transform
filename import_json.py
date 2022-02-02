@@ -2,12 +2,8 @@ import json
 import re
 from collections import defaultdict
 
-#####
 
-# This file is a template only
-
-#####
-with open('InputFileName.json') as jsonFile:
+with open('BlickProductFeed.json') as jsonFile:
     jsonObject = json.load(jsonFile)
     jsonFile.close()
 
@@ -68,6 +64,6 @@ print(json.dumps(new_list[2], indent=4))
 # print(count)  # print the total number of products to the console
 
 # write a new json file with the file name specified when the command is run in the terminal
-with open('OutputFileName.json', "w") as jsonFile:
+with open('blick_json_formatted.json', "w") as jsonFile:
     json.dump(new_list, jsonFile)
     jsonFile.close()
